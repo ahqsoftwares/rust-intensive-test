@@ -18,11 +18,12 @@ fn main() {
   println!("Step II");
   
   for data in all.iter() {
-    println!("{}", &data);
     let repeats: Vec<&u64> = all.iter().filter(|x| {
       x == &data
     }).collect();
 
+    std::thread::sleep_ms(2000);
+    
     if repeats.len() == 1 {
       unique.push(data.clone());
     }
