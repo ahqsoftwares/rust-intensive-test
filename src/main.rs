@@ -1,13 +1,13 @@
 use rand::{thread_rng, Rng};
 
 fn main() {
-  let mut unique: Vec<i32> = Vec::new();
-  let mut all: Vec<i32> = Vec::new();
-
+  let mut unique: Vec<u64> = Vec::new();
+  let mut all: Vec<u64> = Vec::new();
+  
   let mut index = 0;
   loop {
     let mut rng = thread_rng();
-    let num: u32 = rng.gen();
+    let num: u64 = rng.gen();
     all.push(num);
     if index == i32::MAX {
       break;
@@ -16,7 +16,7 @@ fn main() {
   }
   
   for data in all.iter() {
-    let repeats: Vec<&i32> = all.iter().filter(|x| {
+    let repeats: Vec<&u64> = all.iter().filter(|x| {
       x == &data
     }).collect();
 
