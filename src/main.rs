@@ -4,12 +4,12 @@ fn main() {
   let mut unique: Vec<u64> = Vec::new();
   let mut all: Vec<u64> = Vec::new();
   
-  let mut index = 0;
+  let mut index: u128 = 0;
   loop {
     let mut rng = thread_rng();
     let num: u64 = rng.gen();
     all.push(num);
-    if index == 600000 {
+    if index == u128::MAX {
       break;
     }
     index += 1;
