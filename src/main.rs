@@ -9,18 +9,19 @@ fn main() {
     let mut rng = thread_rng();
     let num: u64 = rng.gen();
     all.push(num);
-    if index == i32::MAX {
+    if index == 600000 {
       break;
     }
     index += 1;
   }
+
+  println!("Step II");
   
   for data in all.iter() {
+    println!("{}", &data);
     let repeats: Vec<&u64> = all.iter().filter(|x| {
       x == &data
     }).collect();
-
-    println!("{}", &data);
 
     if repeats.len() == 1 {
       unique.push(data.clone());
