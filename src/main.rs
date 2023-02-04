@@ -11,7 +11,7 @@ fn main() {
   loop {
     let num: u64 = rng.gen();
     all.push(num);
-    if index == u32::MAX {
+    if index == 214748364 {
       break;
     }
     index += 1;
